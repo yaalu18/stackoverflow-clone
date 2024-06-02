@@ -1,0 +1,56 @@
+import React from 'react'
+import {Link} from 'react-router-dom'
+import stackicon from '../assets/stackicon.png';
+import searchicon from '../assets/searchicon.png';
+import  Avatar from './Avatar/Avatar.jsx'
+import Button from './Button/Button.jsx'
+import './Navbar.css'
+//<Link to='/' style={{color:'white',textDecoration:'none'}}>Manoj</Link>
+
+const Navbar=()=>{
+    var User=null
+    return(
+        <nav className='main-nav'>
+            <div className="navbar"> 
+                <Link to='/' className='nav-item nav-btn'>
+                    
+                    <img src={stackicon} alt='logo'></img>
+                </Link>
+                <Link to='/' className='nav-item nav-btn'>About</Link>
+                <Link to='/' className='nav-item nav-btn'>Product</Link>
+                <Link to='/' className='nav-item nav-btn'>For Teams</Link>
+                
+            <form>
+                <input type="text" placeholder="Search../"/>
+                <img src={searchicon} alt="search" width="18" className='search-icon'/>
+               
+            </form>
+            
+            {User === null ?
+            (
+                <>
+                    <Link to='Auth' className='nav-item nav-links'>Log in</Link>
+                
+                    <Link to='/' className=' '>
+                        <Avatar backgroundColor='#009dff' px='10px'py='7py' borderRadius='50%' color='white'>
+                        Manoj
+                        </Avatar>  
+                    </Link>
+                    <button className='nav-item nav-link' >Log out</button>
+                </>
+                
+
+            ) :
+            (
+            // What to render when User is not null
+            // For example, render nothing or other components
+            null
+            )
+            }
+
+            </div>
+        </nav>
+    )   
+}
+export default Navbar;
+

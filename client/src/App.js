@@ -1,0 +1,37 @@
+
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import './App.css';
+import Navbar from './components/Navbar';
+import stackiconf from './assets/stackicon.png';
+import AllRoutes from './components/AllRoutes';
+//import {Routes,Route} from 'react-router-dom';
+import Auth from './pages/Auth/Auth.jsx';
+import Home from './pages/Home/Home.jsx';
+
+
+function App() {
+  return (
+    <div className="App">
+      {/*<h1> Stack overflow clone</h1>
+      <img src={stackiconf} alt="logo"/>*/}
+      <BrowserRouter>
+        <Navbar/>
+        <Home/>
+        <AllRoutes/>
+        {/*  <Routes>
+            <Route exact path='/' component={Home}/>
+            <Route path='/Auth' component={Auth}/>
+    </Routes>*/}
+      </BrowserRouter>
+    </div>
+  );
+}
+
+export default App;
+/*import StackOverflowLogo from "./assets/index";
+const  NavbarLogo={
+    "ID":1,
+    "StackOverFlowLogo":
+}
+const App=()=><StackOverflowLogo NavbarLogo={NavbarLogo}/>
+export default App*/
