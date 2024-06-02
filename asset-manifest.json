@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/yaalu18/stackoverflow-clone/static/css/main.29b4a021.css",
+    "main.js": "/yaalu18/stackoverflow-clone/static/js/main.43d3fbdc.js",
+    "static/js/462.bd317c17.chunk.js": "/yaalu18/stackoverflow-clone/static/js/462.bd317c17.chunk.js",
+    "static/media/globe.png": "/yaalu18/stackoverflow-clone/static/media/globe.565fc9d21cd1f5716524.png",
+    "index.html": "/yaalu18/stackoverflow-clone/index.html",
+    "main.29b4a021.css.map": "/yaalu18/stackoverflow-clone/static/css/main.29b4a021.css.map",
+    "main.43d3fbdc.js.map": "/yaalu18/stackoverflow-clone/static/js/main.43d3fbdc.js.map",
+    "462.bd317c17.chunk.js.map": "/yaalu18/stackoverflow-clone/static/js/462.bd317c17.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.29b4a021.css",
+    "static/js/main.43d3fbdc.js"
+  ]
+}
