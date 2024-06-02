@@ -5,13 +5,13 @@ import React from 'react';
  import reportWebVitals from './reportWebVitals';
  import {Provider} from 'react-redux'; 
  import {createRoot} from 'react-dom/client'
- import ReducerS from './reducers'
+ import Reducers from './reducers'
 import {createStore,applyMiddleware,compose} from 'redux'; 
 import {thunk} from 'redux-thunk'; 
 //import store from './reducers'
 //import rootReducer from './reducers';
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const store=createStore(ReducerS,compose(applyMiddleware(thunk)));
+const store=createStore(Reducers,compose(applyMiddleware(thunk)));
 root.render( 
   <Provider store={store}> 
     <React.StrictMode> 
