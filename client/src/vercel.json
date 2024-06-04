@@ -1,16 +1,6 @@
 {
-    "version": 2,
-    "name": "server",
-    "builds": [
-      {
-        "src": "index.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "index.js"
-      }
+    "rewrites": [
+      { "source": "/favicon.ico", "destination":"C:/Users/HP/Desktop/stackoverflow-clone/client/public/favicon.ico "}
     ]
   }
+  
