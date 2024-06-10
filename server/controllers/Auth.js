@@ -20,7 +20,7 @@ export const signup=async(req,res)=>{
 
 }
 export const login=async(req,res)=>{
-    const{name,email,password}=req.body;
+    const{email,password}=req.body;
     try{
         const existinguser=await users.findOne({email});
         if (!existinguser){
