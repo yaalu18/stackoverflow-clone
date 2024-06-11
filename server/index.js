@@ -9,6 +9,8 @@ import userRoutes from './routes/users.js';
 
 dotenv.config();
 //connectDB();
+const baseUrl = process.env.BASE_URL;
+console.log(`Base URL is: ${baseUrl}`);
 
 const app=express();
 
