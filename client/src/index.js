@@ -7,7 +7,7 @@ import React from 'react';
  import {createRoot} from 'react-dom/client'
  import combineReducers from './reducers'
 import {createStore,applyMiddleware,compose} from 'redux'; 
-import thunk from 'redux-thunk'; 
+import {thunk} from 'redux-thunk'; 
 //import store from './reducers'
 //import rootReducer from './reducers';
 const root = ReactDOM.createRoot(document.getElementById('root'));
