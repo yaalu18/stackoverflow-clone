@@ -9,18 +9,34 @@ import userRoutes from './routes/users.js';
 
 dotenv.config();
 //connectDB();
+const baseUrl = process.env.BASE_URL;
+console.log(`Base URL is: ${baseUrl}`);
 
 const app=express();
-
 app.use(express.json({limit:"30mb",extended:true}))
 app.use(express.urlencoded({limit:"30mb",extended:true}))
 app.use(cors());
 app.get('/',(req,res)=>{
-    res.send("This is a stackoverflow clone API")
+    
+    //res.send("This is a stackoverflow clone API")
+    res.send("This is a stackoverflow clone API i made a change")
 })
+app.get('/user/login', (req, res) => {
+    console.log('no problem server side')
+    const { username, password } = req.body;
+    // Perform login logic
+    res.json({ message: 'Login successful' });
+});
+app.get('/test', (req, res) => {
+    res.send('Test route');
+  });
+  app.get('/check', (req, res) => { // Corrected route definition
+    res.send('checking...');
+});
+
 app.use('/user',userRoutes)
 const PORT=process.env.PORT||5000
-const CONNECTION_URL="mongodb+srv://yaalu18:admin1@stack-overflow-clone.1qroguf.mongodb.net/"
+const CONNECTION_URL="mongodb+srv://yaalu18:admin1@stackoverflow-backend-d.ecqpkpw.mongodb.net/";
 mongoose.set('strictQuery', true); // Add this line here
 
 mongoose.connect(CONNECTION_URL,{useNewUrlParser:true,useUnifiedTopology:true})
@@ -35,5 +51,6 @@ mongoose.connect(CONNECTION_URL,{useNewUrlParser:true,useUnifiedTopology:true})
 //app.listen(PORT,()=>{
 //          console.log(`server running on port ${PORT}`)
 //      })
+
 
 
