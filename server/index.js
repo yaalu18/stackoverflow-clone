@@ -20,7 +20,14 @@ app.use(cors());
 app.get('/',(req,res)=>{
     res.send("This is a stackoverflow clone API")
 })
-app.use('/user',userRoutes)
+app.get('/user/login', (req, res) => {
+    console.log('no problem server side')
+    const { username, password } = req.body;
+    console.log(username)
+    // Perform login logic
+    res.json({ message: 'Login successful' });
+});
+//app.use('/user',userRoutes)
 const PORT=process.env.PORT||5000
 const CONNECTION_URL="mongodb+srv://yaalu18:admin1@stack-overflow-clone.1qroguf.mongodb.net/"
 mongoose.set('strictQuery', true); // Add this line here
