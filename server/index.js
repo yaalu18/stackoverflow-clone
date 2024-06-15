@@ -20,7 +20,7 @@ app.use(cors());
 app.get('/',(req,res)=>{
     res.send("This is a stackoverflow clone API")
 })
-app.get('/user/login', (req, res) => {
+app.post('/user/login', (req, res) => {
     console.log('no problem server side')
     const { username, password } = req.body;
     console.log(username)
