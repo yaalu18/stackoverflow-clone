@@ -17,7 +17,7 @@ const app=express();
 app.use(express.json({limit:"30mb",extended:true}))
 app.use(express.urlencoded({limit:"30mb",extended:true}))
 app.use(cors());
-app.get('/',(req,res)=>{
+app.post('/',(req,res)=>{
     res.send("This is a stackoverflow clone API")
 })
 app.post('/user/login', (req, res) => {
