@@ -6,8 +6,11 @@ import React from 'react';
  import {Provider} from 'react-redux'; 
  import {createRoot} from 'react-dom/client';
 
- 
+ import Reducers from './reducers'
+<<<<<<< HEAD
+=======
 
+>>>>>>> d6440afe1936010852dede88ba5af252f82932a2
  import combineReducers from './reducers';
 
 import {createStore,applyMiddleware,compose} from 'redux'; 
