@@ -5,19 +5,18 @@ import React from 'react';
  import reportWebVitals from './reportWebVitals';
  import {Provider} from 'react-redux'; 
  import {createRoot} from 'react-dom/client'
-<<<<<<< HEAD
+
  import Reducers from './reducers'
-=======
+
  import combineReducers from './reducers'
->>>>>>> 6c8295d3abfce5b9dd86fb81e1c7d230047ae650
+
 import {createStore,applyMiddleware,compose} from 'redux'; 
 import {thunk} from 'redux-thunk'; 
 //import store from './reducers'
 //import rootReducer from './reducers';
 const root = ReactDOM.createRoot(document.getElementById('root'));
-<<<<<<< HEAD
-const store=createStore(Reducers,compose(applyMiddleware(thunk)));
-=======
+
+
 const store=createStore(combineReducers,compose(applyMiddleware(thunk)));
 >>>>>>> 6c8295d3abfce5b9dd86fb81e1c7d230047ae650
 root.render( 
