@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 {
   "version": 2,
@@ -10,3 +11,18 @@
   ]
 }
 
+=======
+"builds": [
+    {
+      "src": "client/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    },
+    {
+      "src": "server/src/**/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+>>>>>>> 6c8295d3abfce5b9dd86fb81e1c7d230047ae650

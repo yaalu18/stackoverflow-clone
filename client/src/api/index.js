@@ -1,8 +1,18 @@
 import axios from "axios";
 
 const API = axios.create({
+<<<<<<< HEAD
  
   baseURL:"https://server-five-murex.vercel.app"
+=======
+  //baseURL:"http://localhost:5000",
+  //baseURL: "https://stack-overflow-eight.vercel.app/",
+  //baseURL:"https://vercel.com/yaalu18s-projects/stackoverflow-clone",
+  //baseURL:"https://stackoverflow-clone1.vercel.app/",
+  //baseURL:"https://final-try-five.vercel.app/",
+  //baseURL:"https://final-try-git-main-yaalu18s-projects.vercel.app/",
+  baseURL:"https://server-five-murex.vercel.app/",
+>>>>>>> 6c8295d3abfce5b9dd86fb81e1c7d230047ae650
 });
 
 API.interceptors.request.use((req) => {

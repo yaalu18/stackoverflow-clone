@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "rewrites": [
     {
@@ -6,3 +7,13 @@
     }
   ]
 }
+=======
+
+{
+  "version": 2,
+  "builds": [
+    { "src": "client/public/**/*", "use": "@vercel/static" }
+  ]
+}
+
+>>>>>>> 6c8295d3abfce5b9dd86fb81e1c7d230047ae650
