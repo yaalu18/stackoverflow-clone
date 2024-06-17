@@ -33,7 +33,7 @@ const Navbar=()=>{
                 
                     <Link to='/' className=' '>
                         <Avatar backgroundColor='#009dff' px='10px'py='7py' borderRadius='50%' color='white'>
-                        <Link to='/User' style={color:"white",textDecoration:"none"}><Manoj/Link> 
+                        <Link to='/User' style={{color:"white",textDecoration:"none"}}>Manoj</Link> 
                         </Avatar>  
                     </Link>
                     <button className='nav-item nav-link' >Log out</button>
