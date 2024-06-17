@@ -20,9 +20,17 @@ app.use(cors());
 app.post('/',(req,res)=>{
     res.send("This is a stackoverflow clone API")
 })
+app.post('/user/signup', (req, res) => {
+    console.log('no problem server side')
+    const { name,email,password } = req.body;
+    console.log(username)
+    // Perform login logic
+    res.json({ message: 'signup sucessfull' });
+    console.log(`Received signup request for ${name} with email ${email} and password ${password}`);
+});
 app.post('/user/login', (req, res) => {
     console.log('no problem server side')
-    const { username, password } = req.body;
+    const { email,password } = req.body;
     console.log(username)
     // Perform login logic
     res.json({ message: 'Login successful' });
