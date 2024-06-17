@@ -25,7 +25,7 @@ export const login = (authData, navigate) => async (dispatch) => {
     const { data } = response;
     console.log("Extracted data:", data);
     dispatch({ type: "AUTH", data });
-    console.log("Dispatched AUTH action with data:", data);
+    console.log("Dispatched AUTH action with data:", authData);
     dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
     navigate("/");
   } catch (error) {

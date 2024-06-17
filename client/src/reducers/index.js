@@ -4,7 +4,7 @@ import currentUserReducer from "./currentUser";
 
 export default combineReducers({
   authReducer,
-  //currentUserReducer,
+  currentUserReducer,
 });
 
 

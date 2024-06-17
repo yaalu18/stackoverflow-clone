@@ -8,7 +8,7 @@ import './Navbar.css'
 //<Link to='/' style={{color:'white',textDecoration:'none'}}>Manoj</Link>
 
 const Navbar=()=>{
-    var User=null
+    var User=JSON.parse(localStorage.getItem('profile'))
     return(
         <nav className='main-nav'>
             <div className="navbar"> 
@@ -33,7 +33,7 @@ const Navbar=()=>{
                 
                     <Link to='/' className=' '>
                         <Avatar backgroundColor='#009dff' px='10px'py='7py' borderRadius='50%' color='white'>
-                        Manoj
+                        <Link to='/User' style={color:"white",textDecoration:"none"}><Manoj/Link> 
                         </Avatar>  
                     </Link>
                     <button className='nav-item nav-link' >Log out</button>

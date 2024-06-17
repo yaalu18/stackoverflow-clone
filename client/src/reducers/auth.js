@@ -1,7 +1,7 @@
 //import { useNavigate } from 'react-router-dom';
 
 
-const authReducer = (state = { data: null }, action) => {
+const authReducer = (state = { data: null },action) => {
     switch (action.type) {
       case "AUTH":
         console.log('am i dispatching auth')

@@ -1,9 +1,8 @@
 import axios from "axios";
 
 const API = axios.create({
-  //baseURL:"http://localhost:5000",
-  //baseURL: "https://stack-overflow-eight.vercel.app/",
-  baseURL:" https://vercel.com/yaalu18s-projects/stackoverflow-clone",
+ 
+  baseURL:"https://server-five-murex.vercel.app"
 });
 
 API.interceptors.request.use((req) => {
@@ -14,6 +13,7 @@ API.interceptors.request.use((req) => {
   }
   return req;
 });
+
 
 export const logIn = (authData) => API.post("/user/login", authData);
 export const signUp = (authData) => API.post("/user/signup", authData);

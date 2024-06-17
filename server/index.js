@@ -21,11 +21,21 @@ app.get('/',(req,res)=>{
     //res.send("This is a stackoverflow clone API")
     res.send("This is a stackoverflow clone API i made a change")
 })
-app.get('/user/login', (req, res) => {
-    console.log('no problem server side')
-    const { username, password } = req.body;
+app.post('/user/login', (req, res) => {
+    console.log('no problem server side, problem is on hosting environment')
+    const {email,passsword } = req.body;
     // Perform login logic
     res.json({ message: 'Login successful' });
+   //console.log(password);
+   console.log(`Received slogin request for ${email} and password ${password}`);
+});
+app.post('/user/signup', (req, res) => {
+    console.log('no problem server side, problem is on hosting environment')
+    const {name,email,passsword } = req.body;
+    // Perform login logic
+    res.json({ message: 'Signup successful' });
+    //console.log('password'password);
+    console.log(`Received signup request for ${name} with email ${email} and password ${password}`);
 });
 app.get('/test', (req, res) => {
     res.send('Test route');
@@ -51,6 +61,6 @@ mongoose.connect(CONNECTION_URL,{useNewUrlParser:true,useUnifiedTopology:true})
 //app.listen(PORT,()=>{
 //          console.log(`server running on port ${PORT}`)
 //      })
-
+export default app;
 
 
