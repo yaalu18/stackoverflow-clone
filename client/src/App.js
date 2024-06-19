@@ -8,8 +8,7 @@ import AllRoutes from './components/AllRoutes';
 import Auth from './pages/Auth/Auth.jsx';
 import Home from './pages/Home/Home.jsx';
 import { useDispatch } from 'react-redux';
-
-
+import { useEffect, useState } from "react";
 function App() {
   const dispatch = useDispatch();
 
