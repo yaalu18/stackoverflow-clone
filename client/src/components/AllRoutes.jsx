@@ -6,6 +6,7 @@ import Auth from '../pages/Auth/Auth.jsx';
 import Questions from '../pages/Questions/Questions.jsx';
 import AskQuestion from '../pages/AskQuestion/AskQuestion.jsx';
 import DisplayQuestions from '../pages/Questions/DisplayQuestions.jsx';
+import User from '../pages/Users/User.jsx'
 const AllRoutes=()=>{
     return(
         <Routes>
@@ -14,6 +15,7 @@ const AllRoutes=()=>{
             <Route path='/Questions' element={<Questions/>}/>
             <Route path='/AskQuestion' element={<AskQuestion/>}/>
             <Route path='/Questions/:id' element={<DisplayQuestions/>}/>
+            <Route path='/User' element={<User/>}/>
         </Routes>
     )
 }
