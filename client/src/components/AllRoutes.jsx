@@ -7,6 +7,7 @@ import Questions from '../pages/Questions/Questions.jsx';
 import AskQuestion from '../pages/AskQuestion/AskQuestion.jsx';
 import DisplayQuestions from '../pages/Questions/DisplayQuestions.jsx';
 import Users from '../pages/Users/User.jsx'
+import UserProfile from '../pages/UserProfile/UserProfile.jsx';
 const AllRoutes=({slideIn, handleSlideIn })=>{
     return(
         <Routes>
