@@ -12,10 +12,10 @@ import { useEffect, useState } from "react";
 function App() {
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchAllQuestions());
-    dispatch(fetchAllUsers());
-  }, [dispatch]);
+  //useEffect(() => {
+    //dispatch(fetchAllQuestions());
+    //dispatch(fetchAllUsers());
+  }//, [dispatch]);
 
   const [slideIn, setSlideIn] = useState(true);
 
