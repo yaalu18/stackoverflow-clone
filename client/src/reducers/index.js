@@ -6,7 +6,7 @@ import usersReducer from "./users";
 export default combineReducers({
   authReducer,
   currentUserReducer,
-  usersReducer;
+  usersReducer
 });
 
 
