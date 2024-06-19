@@ -32,9 +32,11 @@ const Navbar=()=>{
                     <Link to='Auth' className='nav-item nav-links'>Log in</Link>
                 
                     <Link to='/' className=' '>
+                    <Link to='/User' style={{color:"white",textDecoration:"none"}}>
                         <Avatar backgroundColor='#009dff' px='10px'py='7py' borderRadius='50%' color='white'>
-                        <Link to='/User' style={{color:"white",textDecoration:"none"}}>Manoj</Link> 
+                          Manoj
                         </Avatar>  
+                        </Link> 
                     </Link>
                     <button className='nav-item nav-link' >Log out</button>
                 </>
