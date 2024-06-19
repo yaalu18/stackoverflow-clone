@@ -3,7 +3,7 @@ import './LeftSidebar.css'
 import '../../App.css'
 import { NavLink } from "react-router-dom";
 import Globe from '../../assets/globe.png'
-const LeftSidebar=()=>{
+const LeftSidebar=({slideIn, handleSlideIn} )=>{
     const slideInStyle = {
         transform: "translateX(0%)",
       };

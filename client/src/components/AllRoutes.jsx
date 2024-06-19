@@ -7,7 +7,7 @@ import Questions from '../pages/Questions/Questions.jsx';
 import AskQuestion from '../pages/AskQuestion/AskQuestion.jsx';
 import DisplayQuestions from '../pages/Questions/DisplayQuestions.jsx';
 import Users from '../pages/Users/User.jsx'
-const AllRoutes=()=>{
+const AllRoutes=({slideIn, handleSlideIn })=>{
     return(
         <Routes>
             <Route path='/Home' element={<Home/>}/>
