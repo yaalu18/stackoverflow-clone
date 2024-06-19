@@ -10,6 +10,27 @@ import Home from './pages/Home/Home.jsx';
 
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchAllQuestions());
+    dispatch(fetchAllUsers());
+  }, [dispatch]);
+
+  const [slideIn, setSlideIn] = useState(true);
+
+  useEffect(() => {
+    if (window.innerWidth <= 760) {
+      setSlideIn(false);
+    }
+  }, []);
+
+  const handleSlideIn = () => {
+    if (window.innerWidth <= 760) {
+      setSlideIn((state) => !state);
+    }
+  };
+
   return (
     <div className="App">
       {/*<h1> Stack overflow clone</h1>
