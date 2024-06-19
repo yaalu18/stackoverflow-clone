@@ -12,6 +12,6 @@ import HomeMainbar from '../../components/HomeMainbar/HomeMainbar';
                 <RightSidebar/>
             </div>
         </div>
-       
+    )
  }
  export default Home;
