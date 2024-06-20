@@ -39,7 +39,7 @@ app.post('/user/signup', (req, res) => {
     //console.log('password'password);
     console.log(`Received signup request for ${name} with email ${email} and password ${password}`);
 });
-app.post('/user/getAllUsers',getAllUsers);
+app.get('/user/getAllUsers',getAllUsers);
 app.get('/test', (req, res) => {
     res.send('Test route');
   });
