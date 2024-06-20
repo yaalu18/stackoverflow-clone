@@ -22,7 +22,7 @@ export const getAllUsers = async (req, res) => {
   }
 };
 
-export const updateProfile = async (req, res) => {
+/*export const updateProfile = async (req, res) => {
   const { id: _id } = req.params;
   const { name, about, tags } = req.body;
 
@@ -40,4 +40,4 @@ export const updateProfile = async (req, res) => {
   } catch (error) {
     res.status(405).json({ message: error.message });
   }
-};
+};*/
