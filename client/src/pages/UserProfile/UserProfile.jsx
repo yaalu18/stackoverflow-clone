@@ -9,7 +9,7 @@ import moment from "moment";
 import LeftSidebar from "../../components/LeftSidebar/LeftSidebar";
 import Avatar from "../../components/Avatar/Avatar";
 //import EditProfileForm from "./EditProfileForm";
-//import ProfileBio from "./ProfileBio";
+//import ProfileBio from "./ProfileBio"
 //import "./UsersProfile.css";
 
 const UserProfile = ({ slideIn, handleSlideIn }) => {

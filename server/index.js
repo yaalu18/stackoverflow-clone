@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import userRoutes from './routes/users.js';
+import { getAllUsers } from './controllers/users.js';
 //import User from './models/auth.js';
 //import auth from './models/auth.js';
 //import connectDB from './connectMongoDb.js';
@@ -16,7 +17,7 @@ const app=express();
 app.use(express.json({limit:"30mb",extended:true}))
 app.use(express.urlencoded({limit:"30mb",extended:true}))
 app.use(cors());
-<<<<<<< HEAD
+
 app.get('/',(req,res)=>{
     
     //res.send("This is a stackoverflow clone API")
@@ -38,6 +39,7 @@ app.post('/user/signup', (req, res) => {
     //console.log('password'password);
     console.log(`Received signup request for ${name} with email ${email} and password ${password}`);
 });
+app.post('/user/getAllUsers',getAllUsers);
 app.get('/test', (req, res) => {
     res.send('Test route');
   });
@@ -46,27 +48,9 @@ app.get('/test', (req, res) => {
 });
 
 app.use('/user',userRoutes)
-=======
-app.post('/',(req,res)=>{
-    res.send("This is a stackoverflow clone API")
-})
-app.post('/user/signup', (req, res) => {
-    console.log('no problem server side')
-    const { name,email,password } = req.body;
-    console.log(username)
-    // Perform login logic
-    res.json({ message: 'signup sucessfull' });
-    console.log(`Received signup request for ${name} with email ${email} and password ${password}`);
-});
-app.post('/user/login', (req, res) => {
-    console.log('no problem server side')
-    const { email,password } = req.body;
-    console.log(username)
-    // Perform login logic
-    res.json({ message: 'Login successful' });
-});
-//app.use('/user',userRoutes)
->>>>>>> 6c8295d3abfce5b9dd86fb81e1c7d230047ae650
+
+
+
 const PORT=process.env.PORT||5000
 const CONNECTION_URL="mongodb+srv://yaalu18:admin1@stackoverflow-backend-d.ecqpkpw.mongodb.net/";
 mongoose.set('strictQuery', true); // Add this line here
@@ -84,8 +68,3 @@ mongoose.connect(CONNECTION_URL,{useNewUrlParser:true,useUnifiedTopology:true})
 //          console.log(`server running on port ${PORT}`)
 //      })
 export default app;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 6c8295d3abfce5b9dd86fb81e1c7d230047ae650

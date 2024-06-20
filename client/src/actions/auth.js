@@ -1,7 +1,7 @@
 import * as api from "../api";
 import authReducer from "../reducers/auth";
 import { setCurrentUser } from "./currentUser";
-//import { fetchAllUsers } from "./users";
+import { fetchAllUsers } from "./users";
 
 export const signup = (authData, navigate) => async (dispatch) => {
   try {
@@ -11,7 +11,7 @@ export const signup = (authData, navigate) => async (dispatch) => {
 
     dispatch({ type: "AUTH", data });
     dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
-    //dispatch(fetchAllUsers());
+    dispatch(fetchAllUsers());
     navigate("/");
   } catch (error) {
     console.log(error);
