@@ -3,7 +3,9 @@ import users from "../models/auth.js";
 
 export const getAllUsers = async (req, res) => {
   try {
+    console.log("I am here inside getAllUsers component")
     const allUsers = await users.find();
+    console.log("mistake here inside the await function and finding the user")
     const allUserDetails = [];
     allUsers.forEach((user) => {
       allUserDetails.push({
