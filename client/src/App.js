@@ -9,6 +9,7 @@ import Auth from './pages/Auth/Auth.jsx';
 import Home from './pages/Home/Home.jsx';
 import { useDispatch } from 'react-redux';
 import { useEffect, useState } from "react";
+import { fetchAllUsers } from './actions/users.js';
 function App() {
   const dispatch = useDispatch();
 
