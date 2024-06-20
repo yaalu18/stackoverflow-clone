@@ -13,10 +13,10 @@ import { fetchAllUsers } from './actions/users.js';
 function App() {
   const dispatch = useDispatch();
 
-  useEffect(() => {
+  //useEffect(() => {
     //dispatch(fetchAllQuestions());
-    dispatch(fetchAllUsers());
-  }, [dispatch]);
+    //dispatch(fetchAllUsers());
+  //}, [dispatch]);
 
   const [slideIn, setSlideIn] = useState(true);
 

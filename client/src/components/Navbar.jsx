@@ -10,6 +10,8 @@ import './Navbar.css'
 
 const Navbar=()=>{
     var User=JSON.parse(localStorage.getItem('profile'))
+    console.log(User?.result?._id);
+
     return(
         <nav className='main-nav'>
             <div className="navbar"> 

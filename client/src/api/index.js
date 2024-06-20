@@ -29,6 +29,6 @@ export const signUp = (authData) => API.post("/user/signup", authData);
 //export const deleteAnswer = (id, answerId, noOfAnswers) =>
   //API.patch(/answer/delete/${id}, { answerId, noOfAnswers });
 
-export const getAllUsers = () => API.get("/user/getAllUsers");
-export const updateProfile = (id, updateData) =>{
-  API.patch(`/user/update/${id}`, updateData);}
+  export const getAllUsers = () => API.get("/user/getAllUsers");
+  //export const updateProfile = (id, updateData) =>
+    //API.patch(`/user/update/${id}`, updateData);
