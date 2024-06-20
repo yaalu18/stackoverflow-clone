@@ -30,5 +30,5 @@ export const signUp = (authData) => API.post("/user/signup", authData);
   //API.patch(/answer/delete/${id}, { answerId, noOfAnswers });
 
 export const getAllUsers = () => API.get("/user/getAllUsers");
-//export const updateProfile = (id, updateData) =>{
-//  API.patch(`/user/update/${id}`, updateData);}
+export const updateProfile = (id, updateData) =>{
+  API.patch(`/user/update/${id}`, updateData);}
