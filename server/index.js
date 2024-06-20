@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import userRoutes from './routes/users.js';
-import { getAllUsers } from './controllers/users.js';
+//import { getAllUsers } from './controllers/users.js';
 //import User from './models/auth.js';
 //import auth from './models/auth.js';
 //import connectDB from './connectMongoDb.js';
@@ -39,7 +39,7 @@ app.post('/user/signup', (req, res) => {
     //console.log('password'password);
     console.log(`Received signup request for ${name} with email ${email} and password ${password}`);
 });
-app.get('/user/getAllUsers',getAllUsers);
+
 app.get('/test', (req, res) => {
     res.send('Test route');
   });
