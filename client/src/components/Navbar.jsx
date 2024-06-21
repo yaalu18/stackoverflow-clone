@@ -5,9 +5,7 @@ import searchicon from '../assets/searchicon.png';
 import  Avatar from './Avatar/Avatar.jsx'
 import Button from './Button/Button.jsx'
 import './Navbar.css'
-//import User from '../pages/Users/User.jsx';
-//<Link to='/' style={{color:'white',textDecoration:'none'}}>Manoj</Link>
-
+import { useState, useEffect } from 'react';
 const Navbar=()=>{
     //var User=JSON.parse(localStorage.getItem('profile'))
     //console.log(User?.result?.id);
