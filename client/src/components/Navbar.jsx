@@ -9,9 +9,21 @@ import './Navbar.css'
 //<Link to='/' style={{color:'white',textDecoration:'none'}}>Manoj</Link>
 
 const Navbar=()=>{
-    var User=JSON.parse(localStorage.getItem('profile'))
-    console.log(User?.result?.id);
-
+    //var User=JSON.parse(localStorage.getItem('profile'))
+    //console.log(User?.result?.id);
+    
+        const [user, setUser] = useState(null);
+    
+        useEffect(() => {
+            const userProfile = JSON.parse(localStorage.getItem('profile'));
+            setUser(userProfile);
+        }, []);
+    
+        console.log(user?.result?.id);
+    
+        // Rest of your component code
+    
+    
     return(
         <nav className='main-nav'>
             <div className="navbar"> 
