@@ -13,11 +13,11 @@ const Navbar=()=>{
         const [user, setUser] = useState(null);
     
         useEffect(() => {
-            const userProfile = JSON.parse(localStorage.getItem('profile'));
-            setUser(userProfile);
+            const User = JSON.parse(localStorage.getItem('profile'));
+            setUser(User);
         }, []);
     
-        console.log(user?.result?.id);
+        console.log(User?.result?.id);
     
         // Rest of your component code
     
