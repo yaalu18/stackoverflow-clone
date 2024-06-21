@@ -6,7 +6,7 @@ const authReducer = (state = { data: null },action) => {
       case "AUTH":
         console.log('am i dispatching auth')
         console.log("this is the thing",action?.data)
-        localStorage.setItem("Profile", JSON.stringify({ ...action?.data }));
+        localStorage.setItem("Profile", JSON.stringify({ action?.data }));
         console.log('why its not moving forward')
         return { ...state, data: action?.data };
       case "LOGOUT":
