@@ -10,15 +10,20 @@ const Navbar=()=>{
     //var User=JSON.parse(localStorage.getItem('profile'))
     //console.log(User?.result?.id);
     
-        const [User, setUser] = useState(null);
-    
-        useEffect(() => {
+        const [User, setUser] = useState(null); useEffect(() => {
             const storedUser = JSON.parse(localStorage.getItem('profile'));
             setUser(storedUser);
-        }, [User]);
+        }, []);
     
-        console.log('finally the users id is:',User?.result?.id);
+        useEffect(() => {
+            // Log user ID when User is not null and has result.id defined
+            if (User && User.result && User.result.id) {
+                console.log('finally the users id is:', User.result.id);
+            }
+        }, [User]); // This effect runs whenever User changes
     
+    
+        
         // Rest of your component code
     
     
