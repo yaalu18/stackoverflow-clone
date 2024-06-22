@@ -16,6 +16,7 @@ const Navbar=()=>{
         }, []);
     
         useEffect(() => {
+            console.log('User updated:', User); // Log whenever User changes
             // Log user ID when User is not null and has result.id defined
             if (User && User.result && User.result.id) {
                 console.log('finally the users id is:', User.result.id);
