@@ -7,19 +7,19 @@ import Button from './Button/Button.jsx'
 import './Navbar.css'
 import { useState, useEffect } from 'react';
 const Navbar=()=>{
-    var User=JSON.parse(localStorage.getItem('profile'))
-    console.log(User?.result?.id);
+    //var User=JSON.parse(localStorage.getItem('profile'))
+    //console.log(User?.result?.id);
     
-        /*const [User, setUser] = useState(null);
+        const [User, setUser] = useState(null);
     
         useEffect(() => {
             const storedUser = JSON.parse(localStorage.getItem('profile'));
             setUser(storedUser);
-        }, []);
+        }, [User]);
     
-        console.log(User?.result?.id);
+        console.log('finally the users id is:',User?.result?.id);
     
-        // Rest of your component code*/
+        // Rest of your component code
     
     
     return(
