@@ -5,17 +5,22 @@ import searchicon from '../assets/searchicon.png';
 import  Avatar from './Avatar/Avatar.jsx'
 import Button from './Button/Button.jsx'
 import './Navbar.css';
-import { UseSelector } from 'react-redux';
+import { UseSelector, useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
+import { setCurrentUser } from '../actions/currentUser';
 const Navbar=()=>{
     //var User=JSON.parse(localStorage.getItem('profile'))
     //console.log(User?.result?.id);
         var User=useSelector((state)=>(state.currentUserReducer))
+        const dispatch=useDispatch()
         const [User, setUser] = useState(null); 
         console.log('User',User)
         console.log('profile',JSON.parse(localStorage.getItem('profile')))
-        
         useEffect(() => {
+            dispatch(setCurrentUser(JSON.parse(localStorage.getItem('profile'))))
+        }, [dispatch]);
+        
+        /*useEffect(() => {
             const storedUser = JSON.parse(localStorage.getItem('profile'));
             setUser(storedUser);
             console.log('storedUser',storedUser)
@@ -32,7 +37,7 @@ const Navbar=()=>{
     
     
         
-        // Rest of your component code
+        // Rest of your component code*/
     
     
     return(
