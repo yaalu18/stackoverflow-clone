@@ -4,12 +4,13 @@ import stackicon from '../assets/stackicon.png';
 import searchicon from '../assets/searchicon.png';
 import  Avatar from './Avatar/Avatar.jsx'
 import Button from './Button/Button.jsx'
-import './Navbar.css'
+import './Navbar.css';
+import { UseSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
 const Navbar=()=>{
     //var User=JSON.parse(localStorage.getItem('profile'))
     //console.log(User?.result?.id);
-    
+        var User=useSelector((state)=>(state.currentUserReducer))
         const [User, setUser] = useState(null); 
         console.log('User',User)
         console.log('profile',JSON.parse(localStorage.getItem('profile')))
