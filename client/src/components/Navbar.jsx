@@ -11,6 +11,9 @@ const Navbar=()=>{
     //console.log(User?.result?.id);
     
         const [User, setUser] = useState(null); 
+        console.log('User',User)
+        console.log('profile',JSON.parse(localStorage.getItem('profile')))
+        
         useEffect(() => {
             const storedUser = JSON.parse(localStorage.getItem('profile'));
             setUser(storedUser);
