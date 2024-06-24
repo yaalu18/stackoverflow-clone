@@ -21,10 +21,16 @@ const Navbar=()=>{
         console.log('User',User)
         console.log('profile:',JSON.parse(localStorage.getItem('profile')))
         useEffect(() => {
+            const storedProfile = JSON.parse(localStorage.getItem('profile'));
+            console.log('Stored Profile:', storedProfile); // Log the stored profile
+            dispatch(setCurrentUser(storedProfile)); // Dispatch action to set current user
+        }, [dispatch]);
+        /*useEffect(() => {
+        
             dispatch(setCurrentUser(JSON.parse(localStorage.getItem('profile'))))
         }, [dispatch]);
         
-        /*useEffect(() => {
+        useEffect(() => {
             const storedUser = JSON.parse(localStorage.getItem('profile'));
             setUser(storedUser);
             console.log('storedUser',storedUser)
