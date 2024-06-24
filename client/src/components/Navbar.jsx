@@ -14,13 +14,13 @@ const Navbar=()=>{
     //var User=JSON.parse(localStorage.getItem('profile'))
     //console.log(User?.result?.id);
 
-        var User = useSelector(state => state.currentUserReducer); // Correct usage
-        const dispatch = useDispatch(); // Correct usage
+        //var User = useSelector(state => state.currentUserReducer); // Correct usage
+        //const dispatch = useDispatch(); // Correct usage
 
         //const [User, setUser] = useState(null); 
         console.log('User',User)
         //console.log('profile:',JSON.parse(localStorage.getItem('profile')))
-        useEffect(() => {
+        /*useEffect(() => {
             console.log('Stored Profile in localStorage:', localStorage.getItem('Profile'));
             const storedProfile = JSON.stringify(localStorage.getItem('Profile'));
             console.log('Stored Profile:', storedProfile); // Log the stored profile
