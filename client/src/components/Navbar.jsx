@@ -5,8 +5,10 @@ import searchicon from '../assets/searchicon.png';
 import  Avatar from './Avatar/Avatar.jsx'
 import Button from './Button/Button.jsx'
 import './Navbar.css';
-import { UseSelector, useDispatch } from 'react-redux';
+
 import { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+
 import { setCurrentUser } from '../actions/currentUser';
 const Navbar=()=>{
     //var User=JSON.parse(localStorage.getItem('profile'))
