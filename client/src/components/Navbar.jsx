@@ -21,7 +21,8 @@ const Navbar=()=>{
         console.log('User',User)
         //console.log('profile:',JSON.parse(localStorage.getItem('profile')))
         useEffect(() => {
-            const storedProfile = JSON.parse(localStorage.getItem('Profile'));
+            console.log('Stored Profile in localStorage:', localStorage.getItem('Profile'));
+            const storedProfile = JSON.stringify(localStorage.getItem('Profile'));
             console.log('Stored Profile:', storedProfile); // Log the stored profile
             dispatch(setCurrentUser(storedProfile)); // Dispatch action to set current user
         }, [dispatch]);
