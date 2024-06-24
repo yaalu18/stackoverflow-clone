@@ -11,18 +11,18 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { setCurrentUser } from '../actions/currentUser';
 const Navbar=()=>{
-    var User=JSON.parse(localStorage.getItem('Profile'))
-    console.log('finally the user:',User?.result?.id);
-
-        //var User = useSelector(state => state.currentUserReducer); // Correct usage
-        //const dispatch = useDispatch(); // Correct usage
+    //var User=JSON.parse(localStorage.getItem('Profile'))
+    //console.log('finally the user:',User?.result?._id);
+    //console.log('finally the user:',User.result[email]);
+        var User = useSelector(state => state.currentUserReducer); // Correct usage
+        const dispatch = useDispatch(); // Correct usage
 
         //const [User, setUser] = useState(null); 
-        //console.log('User',User)
+        console.log('User',User)
         //console.log('profile:',JSON.parse(localStorage.getItem('profile')))
-        /*useEffect(() => {
+        useEffect(() => {
             console.log('Stored Profile in localStorage:', localStorage.getItem('Profile'));
-            const storedProfile = JSON.stringify(localStorage.getItem('Profile'));
+            const storedProfile = JSON.parse(localStorage.getItem('Profile'));
             console.log('Stored Profile:', storedProfile); // Log the stored profile
             dispatch(setCurrentUser(storedProfile)); // Dispatch action to set current user
         }, [dispatch]);
