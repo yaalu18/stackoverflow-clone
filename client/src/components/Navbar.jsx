@@ -19,9 +19,9 @@ const Navbar=()=>{
 
         //const [User, setUser] = useState(null); 
         console.log('User',User)
-        console.log('profile:',JSON.parse(localStorage.getItem('profile')))
+        //console.log('profile:',JSON.parse(localStorage.getItem('profile')))
         useEffect(() => {
-            const storedProfile = JSON.parse(localStorage.getItem('profile'));
+            const storedProfile = JSON.parse(localStorage.getItem('Profile'));
             console.log('Stored Profile:', storedProfile); // Log the stored profile
             dispatch(setCurrentUser(storedProfile)); // Dispatch action to set current user
         }, [dispatch]);
