@@ -18,7 +18,7 @@ const Navbar=()=>{
         //const dispatch = useDispatch(); // Correct usage
 
         //const [User, setUser] = useState(null); 
-        console.log('User',User)
+        //console.log('User',User)
         //console.log('profile:',JSON.parse(localStorage.getItem('profile')))
         /*useEffect(() => {
             console.log('Stored Profile in localStorage:', localStorage.getItem('Profile'));
