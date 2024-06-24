@@ -11,8 +11,8 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { setCurrentUser } from '../actions/currentUser';
 const Navbar=()=>{
-    //var User=JSON.parse(localStorage.getItem('profile'))
-    //console.log(User?.result?.id);
+    var User=JSON.parse(localStorage.getItem('Profile'))
+    console.log('finally the user:',User?.result?.id);
 
         //var User = useSelector(state => state.currentUserReducer); // Correct usage
         //const dispatch = useDispatch(); // Correct usage
