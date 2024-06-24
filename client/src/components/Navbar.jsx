@@ -21,7 +21,7 @@ const Navbar=()=>{
         console.log('User',User)
         //console.log('profile:',JSON.parse(localStorage.getItem('profile')))
         useEffect(() => {
-            console.log('Stored Profile in localStorage:', localStorage.getItem('Profile'));
+            console.log('Stored Profile in localStorage:',localStorage.getItem('Profile'));
             const storedProfile = JSON.parse(localStorage.getItem('Profile'));
             console.log('Stored Profile:', storedProfile); // Log the stored profile
             dispatch(setCurrentUser(storedProfile)); // Dispatch action to set current user
@@ -79,7 +79,9 @@ const Navbar=()=>{
                             {User.result.name.charAt(0).toUpperCase()}
                             </Link>
                         </Avatar>
-                        <button className='nav-item nav-link' onClick={handleLogout}>Log out</button>
+                        
+                       {/* <button className='nav-item nav-link' onClick={handleLogout}>Log out</button>*/}
+                        <button className='nav-item nav-link'>Log out</button>
                     </>
                    
                 )}
