@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import userRoutes from './routes/users.js';
+import questionRoutes from './routes/Question.js'
 
 //import User from './models/auth.js';
 //import auth from './models/auth.js';
@@ -23,23 +24,15 @@ app.get('/',(req,res)=>{
     //res.send("This is a stackoverflow clone API")
     res.send("This is a stackoverflow clone API i made a change")
 })
-app.post('/user/login', (req, res) => {
-    console.log('no problem server side, problem is on hosting environment')
-    const {email,passsword } = req.body;
+/*app.post('/user/login', (req, res) => {
+    console.log('here inside index.js login , i am matching the end points')
+    const {email, password } = req.body;
     // Perform login logic
-    res.json({ message: 'Login successful' });
-   //console.log(password);
-   console.log(`Received slogin request for ${email} and password ${password}`);
-});
-app.post('/user/signup', (req, res) => {
-    console.log('no problem server side, problem is on hosting environment')
-    const {name,email,passsword } = req.body;
-    // Perform login logic
-    res.json({ message: 'Signup successful' });
-    //console.log('password'password);
-    console.log(`Received signup request for ${name} with email ${email} and password ${password}`);
-});
+    
+    //res.json({ message: 'Login successful' });
+     res.json({ message: `User ${email} has logged in with password ${password}` });
 
+});*/
 app.get('/test', (req, res) => {
     res.send('Test route');
   });
@@ -48,6 +41,7 @@ app.get('/test', (req, res) => {
 });
 
 app.use('/user',userRoutes)
+app.use('/questions',questionRoutes)
 
 
 
@@ -67,4 +61,6 @@ mongoose.connect(CONNECTION_URL,{useNewUrlParser:true,useUnifiedTopology:true})
 //app.listen(PORT,()=>{
 //          console.log(`server running on port ${PORT}`)
 //      })
-export default app;
+
+
+
