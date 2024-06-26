@@ -11,7 +11,7 @@ const AskQuestion=()=>{
     const[questionBody,setQuestionBody]=useState('')
     const[questionTags,setQuestionTags]=useState('')
  
-    const handleSubmit=()=>{
+    const handleSubmit=(e)=>{
         e.preventDefault()
         console.log({questionTitle,questionBody,questionTags})
         dispatch(askQuestion({
