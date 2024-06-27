@@ -1,4 +1,5 @@
-
+import Question from "../models/Questions.js";
+//import auth from "../middlewares/auth.js";
 export const AskQuestion = async (req, res) => {
     const postQuestionData = req.body;
     const postQuestion = new Question({ ...postQuestionData, userId: req.userId });
