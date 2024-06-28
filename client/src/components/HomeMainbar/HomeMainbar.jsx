@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link,useLocation,useNavigate} from 'react-router-dom';
+import { UseSelector } from 'react-redux';
 import './HomeMainbar.css';
 import Questions from './Questions.jsx';
 import QuestionList from './QuestionList.jsx';
@@ -8,6 +9,8 @@ const HomeMainbar=()=>{
     const location=useLocation()
     const user=1
     const navigate=useNavigate()
+    const questionsList=useSelector(state=>state.questionsReducer)
+    console.log(questionsList)
    
     const checkAuth = () => {
         if (user === null) {

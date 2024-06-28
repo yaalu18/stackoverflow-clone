@@ -19,7 +19,7 @@ export const signUp = (authData) => API.post("/user/signup", authData);
 
 export const postQuestion = (questionData) =>
   API.post("/questions/Ask", questionData);
-//export const getAllQuestions = () => API.get("/questions/get");
+export const getAllQuestions = () => API.get("/questions/get");
 //export const deleteQuestion = (id) => API.delete(/questions/delete/${id});
 //export const voteQuestion = (id, value) =>
 //  API.patch(/questions/vote/${id}, { value });

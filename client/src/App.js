@@ -10,6 +10,7 @@ import Home from './pages/Home/Home.jsx';
 import { useDispatch } from 'react-redux';
 import { useEffect, useState } from "react";
 import { fetchAllUsers } from './actions/users.js';
+import { fetchAllQuestions } from './actions/question';
 function App() {
   const dispatch = useDispatch();
 
@@ -19,6 +20,9 @@ function App() {
   //}, [dispatch]);
 
   const [slideIn, setSlideIn] = useState(true);
+  useEffect(()=>{
+    dispatch(fetchAllQuestions())
+  },[dispatch])
 
   useEffect(() => {
     if (window.innerWidth <= 760) {
