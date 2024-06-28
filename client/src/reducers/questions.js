@@ -3,7 +3,7 @@ const questionsReducer=(state={data:null},action)=>{
         case "POST_QUESTION":
             return {...state,data:action.payload}
         case "FETTCH_ALL_QUESTION":
-            RETURN {...state,data:action.payload}
+            return {...state,data:action.payload}
         default:
             return state
     }
