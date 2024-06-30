@@ -76,7 +76,7 @@ const HomeMainbar=()=>{
       
     
         
-    return(
+    /*return(
         <div className='main-bar'>
             <div className='main-bar-header'>
             {
@@ -97,9 +97,97 @@ const HomeMainbar=()=>{
                 }
             
             </div>
+        </div>    
+    )*/
+    /*return(
+        <div className='question-details-page'>
+            {
+                questionList.data===null?
+                <h1>Loading...</h1>:
+                <>
+                questionList.data.filter(question=>question._id===id).map(question=>(
+                    <div key={questionList._id}>
+                        {console.log(question)}
+                        <section className='qestion-details-container'>
+                            <h1>{question.questionTitle}</h1>
+                            <div className='question-details-container2'>
+                                <div className='question-votes'>
+                                    <img src={upvote} alt='' width='18' className='votes-icon'/>
+                                    <p>{question.upVotes-question.downVotes}</p>
+                                    <img src={downvote} alt='' width='18' className='votes-icon'/>
+                                </div>
+                            </div>
+                            <div style={{width:'100%'}}>
+                                <p className='question-body'>{question.questionBody}</p>
+                                <div className='question-details-tags'>{question.questionTags.map((tag)=>
+                                <p key={tag}>(tag)</p>
+                                )}
+                            </div>
+                            <div>
+                                <p>asked{question.askedOn}</p>
+                                <Link to={`/User/${question.userId}`} className='user-link' style={{color:''}}
+                                <Avatar backgroundColor='orange' px='8px' py='5px'>{question.userPosted}</Avatar>
+                                <div>{question.userPosted}</div>
+                            </div>
+                            </section>
+                    
+                    </div>
+
+                </>
+                
+            }
         </div>
-    )
-}
+    )}*/
+    return (
+        <div className='question-details-page'>
+            {
+                questionsList.data === null ?
+                    <h1>Loading...</h1> :
+                    <>
+                        {questionsList.data.filter(question=>question._id===id).map(question => (
+                            <div key={question._id}>
+                                {console.log(question)}
+                                <section className='question-details-container'>
+                                    <h1>{question.questionTitle}</h1>
+                                    <div className='question-details-container2'>
+                                        <div className='question-votes'>
+                                            {/* Assuming upvote and downvote variables are defined elsewhere */}
+                                            <img src={upvote} alt='' width='18' className='votes-icon'/>
+                                            <p>{question.upVotes - question.downVotes}</p>
+                                            <img src={downvote} alt='' width='18' className='votes-icon'/>
+                                        </div>
+                                    </div>
+                                    <div style={{width:'100%'}}>
+                                        <p className='question-body'>{question.questionBody}</p>
+                                        <div className='question-details-tags'>
+                                            {question.questionTags.map(tag => (
+                                                <p key={tag}>{tag}</p>
+                                            ))}
+                                        </div>
+                                        <div className='question-actions-user'>
+                                            <div>
+                                                <button type='button'>Share</button>
+                                                <button type='button'>Delete</button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p>asked {question.askedOn}</p>
+                                            <Link to={`/User/${question.userId}`} className='user-link' style={{color:''}}>
+                                                {/* Assuming Avatar component usage */}
+                                                {/* <Avatar backgroundColor='orange' px='8px' py='5px'>{question.userPosted}</Avatar> */}
+                                                <div>{question.userPosted}</div>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        ))}
+                    </>
+            }
+        </div>
+    );
+    
+    }
 
                 
 export default HomeMainbar;

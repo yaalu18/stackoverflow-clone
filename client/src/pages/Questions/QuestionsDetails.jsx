@@ -7,7 +7,7 @@ import { Link,useParams } from 'react-router-dom';
 import DisplayAnswer from './DisplayAnswer';     
 const QuestionsDetails=()=>{
     const {id}=useParams()
-    console.log('yes im printing',id)
+    console.log('yes im printing,Am i coming or not',id)
     var questionList=[{
         id:1,
         upVotes:5,
