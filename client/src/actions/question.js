@@ -10,12 +10,29 @@ export const askQuestion=(questionData,navigate)=>async (dispatch)=>{
         console.log(error)
     }
 }
-export const fetchAllQuestions=()=>async(dispatch)=>{
-    try{
+/*export const fetchAllQuestions=()=>async(dispatch)=>{
+   try{
+    // Handle response data
         console.log("im dispatching fetchAllQuestions")
         const {data}=await api.getAllQuestions()
         dispatch({type:'FETCH_ALL_QUESTION',payload:data})
-    }catch(error){
+   }
+    catch(error){
         console.log(error)
     }
-}
+}*/
+export const fetchAllQuestions = () => async (dispatch) => {
+    try {
+        console.log("Dispatching fetchAllQuestions");
+        const { data } = await api.getAllQuestions({
+            headers: {
+                'Cache-Control': 'no-cache', // Disable caching headers
+                'Pragma': 'no-cache'
+            }
+        });
+        dispatch({ type: 'FETCH_ALL_QUESTION', payload: data });
+    } catch (error) {
+        console.error('Error fetching questions:', error);
+        // Optionally handle error
+    }
+};
