@@ -4,13 +4,14 @@ import { useSelector } from 'react-redux';
 import './HomeMainbar.css';
 import Questions from './Questions.jsx';
 import QuestionList from './QuestionList.jsx';
+import questionsReducer from '../../reducers/questions';
 
 const HomeMainbar=()=>{
     const location=useLocation()
     const user=1
     const navigate=useNavigate()
     const questionsList=useSelector(state=>state.questionsReducer)
-    console.log(questionsList)
+    console.log('questions inside mongodb:',questionsList)
    
     const checkAuth = () => {
         if (user === null) {
