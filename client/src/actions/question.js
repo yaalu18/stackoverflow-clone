@@ -30,6 +30,7 @@ export const fetchAllQuestions = () => async (dispatch) => {
                 'Pragma': 'no-cache'
             }
         });
+        console.log('Fetched questions:', data); // Print fetched questions to console
         dispatch({ type: 'FETCH_ALL_QUESTION', payload: data });
     } catch (error) {
         console.error('Error fetching questions:', error);
