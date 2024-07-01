@@ -1,18 +1,25 @@
 import React from 'react';
 import {Link,useLocation,useNavigate} from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector,useDispatch } from 'react-redux';
 import './HomeMainbar.css';
 import Questions from './Questions.jsx';
 import QuestionList from './QuestionList.jsx';
-import {questionsReducer} from '../../reducers/questions';
+import questionsReducer from '../../reducers/questions';
 
 const HomeMainbar=()=>{
     const location=useLocation()
     const user=1
     const navigate=useNavigate()
-    const questionsList=useSelector(state=>state.questionsReducer)
-    console.log('questions inside mongodb:',questionsList)
-   
+    //const questionsList=useSelector(state=>state.questionsReducer)
+    //console.log('questions inside mongodb:',questionsList)
+    const questionsList = useSelector(state => state.questionsReducer.data);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(fetchAllQuestions()); // Dispatch fetchAllQuestions action on component mount
+    }, [dispatch]);
+
+    console.log('questions inside HomeMainbar:', questionsList); // Log questionsList for verification
     const checkAuth = () => {
         if (user === null) {
             alert("Login or sign up to ask a question");
