@@ -6,6 +6,7 @@ import './HomeMainbar.css';
 import Questions from './Questions.jsx';
 import QuestionList from './QuestionList.jsx';
 import questionsReducer from '../../reducers/questions';
+import { fetchAllQuestions } from '../../actions/question';
 
 const HomeMainbar=()=>{
     const location=useLocation()
