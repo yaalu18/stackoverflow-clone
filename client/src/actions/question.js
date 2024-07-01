@@ -21,7 +21,7 @@ export const askQuestion=(questionData,navigate)=>async (dispatch)=>{
         console.log(error)
     }
 }*/
-export const fetchAllQuestions = () => async (dispatch) => {
+export const fetchAllQuestions = () => async (dispatch,getState) => {
     try {
         console.log("Dispatching fetchAllQuestions");
         const { data } = await api.getAllQuestions({
@@ -32,6 +32,7 @@ export const fetchAllQuestions = () => async (dispatch) => {
         });
         console.log('Fetched questions:', data); // Print fetched questions to console
         dispatch({ type: 'FETCH_ALL_QUESTION', payload: data });
+        console.log('INSIDE fetchAllQuestions:', getState());
     } catch (error) {
         console.error('Error fetching questions:', error);
         // Optionally handle error
