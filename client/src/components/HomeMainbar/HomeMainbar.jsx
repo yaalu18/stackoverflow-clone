@@ -15,17 +15,17 @@ const HomeMainbar=()=>{
     //const questionsList=useSelector(state=>state.questionsReducer)
     //console.log('questions inside mongodb:',questionsList)
     const questionsList = useSelector(state => state.questionsReducer);
-    //const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
-    //useEffect(() => {
-        //dispatch(fetchAllQuestions()); // Dispatch fetchAllQuestions action on component mount
-    //}, [dispatch]);
+    useEffect(() => {
+        dispatch(fetchAllQuestions()); // Dispatch fetchAllQuestions action on component mount
+    }, [dispatch]);
     //if (questionsList === null) {
       //  return <div>loading...</div>; // Or any loading indicator
     //}
 
 
-    console.log('questions inside HomeMainbar:', questionsList); // Log questionsList for verification
+    console.log('questions inside HomeMainbar1:', questionsList); // Log questionsList for verification
     const checkAuth = () => {
         if (user === null) {
             alert("Login or sign up to ask a question");
@@ -36,6 +36,7 @@ const HomeMainbar=()=>{
             navigate('/AskQuestion');
         }
     }
+    console.log('questions inside HomeMainbar1:', questionsList); // Log questionsList for verification
     var questionList=[{
         id:1,
         upVotes:3,
