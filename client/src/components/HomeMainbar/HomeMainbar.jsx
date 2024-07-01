@@ -74,6 +74,32 @@ const HomeMainbar=()=>{
             userId:2,
         }]
         }]
+        return (
+            <div className="main-bar">
+              <div className="main-bar-header">
+                {location.pathname === "/" ? (
+                  <h1>Top Questions</h1>
+                ) : (
+                  <h1>All Questions</h1>
+                )}
+                <button onClick={checkAuth} className="ask-btn">
+                  Ask Question
+                </button>
+              </div>
+              <div>
+                {questionsList.data === null ? (
+                  <h1>Loading...</h1>
+                ) : (
+                  <>
+                    <p>{questionsList.data.length} questions</p>
+                    <QuestionList questionsList={questionsList.data} />
+                  </>
+                )}
+              </div>
+            </div>
+          );
+        };
+        
       
     
         
@@ -139,13 +165,13 @@ const HomeMainbar=()=>{
             }
         </div>
     )}*/
-    return (
+    /*return (
         <div className='question-details-page'>
             {
                 questionsList.data === null ?
                     <h1>Loading...</h1> :
                     <>
-                        {questionsList.data.filter(question=>question._id===_id).map(question => (
+                        {questionsList.data.filter(question=>question._id===id).map(question => (
                             <div key={question._id}>
                                 {console.log(question)}
                                 <section className='question-details-container'>
@@ -153,7 +179,7 @@ const HomeMainbar=()=>{
                                     <div className='question-details-container2'>
                                         <div className='question-votes'>
                                             {/* Assuming upvote and downvote variables are defined elsewhere */}
-                                            <img src={upvote} alt='' width='18' className='votes-icon'/>
+                                            /*<img src={upvote} alt='' width='18' className='votes-icon'/>
                                             <p>{question.upVotes - question.downVotes}</p>
                                             <img src={downvote} alt='' width='18' className='votes-icon'/>
                                         </div>
@@ -174,9 +200,9 @@ const HomeMainbar=()=>{
                                         <div>
                                             <p>asked {question.askedOn}</p>
                                             <Link to={`/User/${question.userId}`} className='user-link' style={{color:''}}>
-                                                {/* Assuming Avatar component usage */}
-                                                {/* <Avatar backgroundColor='orange' px='8px' py='5px'>{question.userPosted}</Avatar> */}
-                                                <div>{question.userPosted}</div>
+                                                {/* Assuming Avatar component usage */
+                                                /* <Avatar backgroundColor='orange' px='8px' py='5px'>{question.userPosted}</Avatar> */}
+                                                /*<div>{question.userPosted}</div>
                                             </Link>
                                         </div>
                                     </div>
@@ -188,7 +214,7 @@ const HomeMainbar=()=>{
         </div>
     );
     
-    }
+    }*/
 
                 
 export default HomeMainbar;
