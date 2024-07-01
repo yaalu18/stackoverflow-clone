@@ -14,14 +14,14 @@ const HomeMainbar=()=>{
     const navigate=useNavigate()
     //const questionsList=useSelector(state=>state.questionsReducer)
     //console.log('questions inside mongodb:',questionsList)
-    const questionsList = useSelector(state => state.questionsReducer);
+    const questionsList = useSelector(state => state.questionsReducer.data);
     const dispatch = useDispatch();
 
     useEffect(() => {
         dispatch(fetchAllQuestions()); // Dispatch fetchAllQuestions action on component mount
     }, [dispatch]);
     if (questionsList === null) {
-        return <div>Loading...</div>; // Or any loading indicator
+        return <div>loading...</div>; // Or any loading indicator
     }
 
 
