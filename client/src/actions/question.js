@@ -32,6 +32,7 @@ export const fetchAllQuestions = () => async (dispatch,getState) => {
         });
         console.log('Fetched questions:', data); // Print fetched questions to console
         dispatch({ type: 'FETCH_ALL_QUESTION', payload: data });
+        //dispatch({ type: 'FETCH_CURRENT_USER', payload: getState() }); // Example of using getState()
         console.log('INSIDE fetchAllQuestions:', getState());
     } catch (error) {
         console.error('Error fetching questions:', error);
