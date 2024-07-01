@@ -13,12 +13,16 @@ const HomeMainbar=()=>{
     const navigate=useNavigate()
     //const questionsList=useSelector(state=>state.questionsReducer)
     //console.log('questions inside mongodb:',questionsList)
-    const questionsList = useSelector(state => state.questionsReducer.data);
+    const questionsList = useSelector(state => state.questionsReducer);
     const dispatch = useDispatch();
 
     useEffect(() => {
         dispatch(fetchAllQuestions()); // Dispatch fetchAllQuestions action on component mount
     }, [dispatch]);
+    if (questionsList === null) {
+        return <div>Loading...</div>; // Or any loading indicator
+    }
+
 
     console.log('questions inside HomeMainbar:', questionsList); // Log questionsList for verification
     const checkAuth = () => {
