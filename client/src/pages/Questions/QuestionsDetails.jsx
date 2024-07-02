@@ -3,7 +3,7 @@ import upvote from '../../assets/upvote.png';
 import downvote from '../../assets/downvote.png';
 import './Questions.css';
 import Avatar from '../../components/Avatar/Avatar.jsx'
-import { UseSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Link,useParams } from 'react-router-dom';
 import DisplayAnswer from './DisplayAnswer';     
 const QuestionsDetails=()=>{
