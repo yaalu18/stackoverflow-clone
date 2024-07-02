@@ -14,7 +14,7 @@ const HomeMainbar=()=>{
     const navigate=useNavigate()
     //const questionsList=useSelector(state=>state.questionsReducer)
     //console.log('questions inside mongodb:',questionsList)
-    const questionsList = useSelector(state => state.questionsReducer.mystate);
+    const questionsList = useSelector(state => state.questionsReducer.data);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -101,11 +101,11 @@ const HomeMainbar=()=>{
                 </button>
               </div>
               <div>
-                {questionsList.mystate === null ? (
+                {questionsList.data === null ? (
                   <h1>Loading...</h1>
                 ) : (
                   <>
-                    <p>state:{questionsList.mystate}</p>
+                    <p>state:{questionsList.data}</p>
                     <p>{questionsList.data.length} questions</p>
                     <QuestionList questionsList={questionsList.data} />
                   </>
