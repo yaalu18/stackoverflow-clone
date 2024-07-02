@@ -105,8 +105,26 @@ const HomeMainbar=()=>{
                   <h1>Loading...</h1>
                 ) : (
                   <>
-                    <p>state:{questionsList.data}</p>
-                    {/*<p>{questionsList.data.length} questions</p>
+                  <div>
+        {questionsList ? (
+          questionsList.map(question => (
+            <div key={question._id} className="question-item">
+              <h2>{question.questionTitle}</h2>
+              <p>{question.questionBody}</p>
+              <p>Tags: {question.questionTags.join(', ')}</p>
+              <p>Number of Answers: {question.noOfAnswers}</p>
+              <p>Upvotes: {question.upVote}</p>
+              <p>Downvotes: {question.downVote}</p>
+              <p>Posted by: {question.userPosted}</p>
+              {/* Render other properties as needed */}
+            </div>
+          ))
+        ) : (
+          <h1>Loading...</h1>
+        )}
+                 </div>
+                    {/*<p>state:{questionsList.data}</p>
+                    <p>{questionsList.data.length} questions</p>
                     <QuestionList questionsList={questionsList.data} />*/}
                   </>
                 )}
