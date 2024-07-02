@@ -101,7 +101,7 @@ const HomeMainbar=()=>{
                 </button>
               </div>
               <div>
-                {questionsList.data === null ? (
+                {questionsList === null ? (
                   <h1>Loading...</h1>
                 ) : (
                   <>
