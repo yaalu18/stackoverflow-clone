@@ -20,7 +20,7 @@ const AllRoutes=({slideIn, handleSlideIn })=>{
             <Route
             path="/Users"
                 element={<Users slideIn={slideIn} handleSlideIn={handleSlideIn} />}/>
-                 <Route
+            <Route
             path="/Users/:id"
             element={
             <UserProfile slideIn={slideIn} handleSlideIn={handleSlideIn} />

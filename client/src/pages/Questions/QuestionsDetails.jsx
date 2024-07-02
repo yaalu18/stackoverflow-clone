@@ -67,12 +67,12 @@ const QuestionsDetails=()=>{
         return (
             <div className='question-details-page'>
                 {
-                    questionsList === null ?
+                    questionsList.data === null ?
                         <h1> Loading...</h1> :
                         (
                             <>
                                 {
-                                    questionsList.filter(question => question.id == id).map((question) => (
+                                    questionsList.data.filter(question => question.id == id).map((question) => (
                                         <div key={question.id}>
                                             <section className='question-details-container'>
                                                 <h1>{question.questionTitle}</h1>
