@@ -89,6 +89,32 @@ const HomeMainbar=()=>{
         }]
         }]
         return (
+            <div className="main-bar">
+              <div className="main-bar-header">
+                {location.pathname === "/" ? (
+                  <h1>Top Questions</h1>
+                ) : (
+                  <h1>All Questions</h1>
+                )}
+                <button onClick={checkAuth} className="ask-btn">
+                  Ask Question
+                </button>
+              </div>
+              <div>
+                {questionsList.data === null ? (
+                  <h1>Loading...</h1>
+                ) : (
+                  <>
+                    <p>{questionsList.data.length} questions</p>
+                    <QuestionList questionsList={questionsList.data} />
+                  </>
+                )}
+              </div>
+            </div>
+          );
+        };
+        
+        /*return (
             <div className='question-details-page'>
               {questionsList.data === null ? (
                 <h1>Loading...</h1>
@@ -118,7 +144,7 @@ const HomeMainbar=()=>{
                             <div>
                               <p>asked {question.askedOn}</p>
                               <Link to={`/User/${question.userId}`} className='user-link' style={{ color: '' }}>
-                                {/* Assuming Avatar is a component */}
+                              
                                 <Avatar backgroundColor='orange' px='8px' py='5px'>
                                   {question.userPosted}
                                 </Avatar>
@@ -134,6 +160,6 @@ const HomeMainbar=()=>{
             </div>
           );
           
-}
+}*/
                 
 export default HomeMainbar;
