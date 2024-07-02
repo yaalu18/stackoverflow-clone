@@ -106,7 +106,7 @@ const HomeMainbar=()=>{
                 ) : (
                   <>
                   <div>
-        {questionsList ? (
+        {Array.isArray(questionsList) && questionsList.length > 0 ? (
           questionsList.map(question => (
             <div key={question._id} className="question-item">
               <h2>{question.questionTitle}</h2>
