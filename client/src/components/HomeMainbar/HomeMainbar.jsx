@@ -106,8 +106,8 @@ const HomeMainbar=()=>{
                 ) : (
                   <>
                     <p>state:{questionsList.data}</p>
-                    <p>{questionsList.data.length} questions</p>
-                    <QuestionList questionsList={questionsList.data} />
+                    {/*<p>{questionsList.data.length} questions</p>
+                    <QuestionList questionsList={questionsList.data} />*/}
                   </>
                 )}
               </div>
