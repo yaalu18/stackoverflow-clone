@@ -14,7 +14,7 @@ const HomeMainbar=()=>{
     const navigate=useNavigate()
     //const questionsList=useSelector(state=>state.questionsReducer)
     //console.log('questions inside mongodb:',questionsList)
-    const questionsList = useSelector(state => state.questionsReducer.data);
+    const questionsList = useSelector(state => state.questionsReducer);
     const dispatch = useDispatch();
 
     useEffect(() => {
