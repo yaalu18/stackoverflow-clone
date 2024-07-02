@@ -105,7 +105,7 @@ const HomeMainbar=()=>{
                   <h1>Loading...</h1>
                 ) : (
                   <>
-                    <p>state:{questionsList}</p>
+                    <p>state:{questionsList.data}</p>
                     {/*<p>{questionsList.data.length} questions</p>
                     <QuestionList questionsList={questionsList.data} />*/}
                   </>
