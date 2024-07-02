@@ -7,6 +7,8 @@ import { Link,useParams } from 'react-router-dom';
 import DisplayAnswer from './DisplayAnswer';     
 const QuestionsDetails=()=>{
     const {id}=useParams()
+    const questionsList = useSelector((state) => state.questionsReducer);
+    console.log('i am inside QuestionsDetails page,where questionsList:',questionsList)
     console.log('yes im printing,Am i coming or not',id)
     var questionList=[{
         id:1,
