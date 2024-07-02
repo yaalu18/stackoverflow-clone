@@ -89,53 +89,51 @@ const HomeMainbar=()=>{
         }]
         }]
         return (
-            <div className="main-bar">
-              <div className="main-bar-header">
-                {location.pathname === "/" ? (
-                  <h1>Top Questions</h1>
-                ) : (
-                  <h1>All Questions</h1>
-                )}
-                <button onClick={checkAuth} className="ask-btn">
-                  Ask Question
-                </button>
-              </div>
-              <div>
-                {questionsList === null ? (
-                  <h1>Loading...</h1>
-                ) : (
-                  <>
-                  <div>
-        {Array.isArray(questionsList) && questionsList.length > 0 ? (
-          questionsList.map(question => (
-            <div key={question._id} className="question-item">
-              <h2>{question.questionTitle}</h2>
-              <p>{question.questionBody}</p>
-              <p>Tags: {question.questionTags.join(', ')}</p>
-              <p>Number of Answers: {question.noOfAnswers}</p>
-              <p>Upvotes: {question.upVote}</p>
-              <p>Downvotes: {question.downVote}</p>
-              <p>Posted by: {question.userPosted}</p>
-              {/* Render other properties as needed */}
-            </div>
-          ))
-        ) : (
-          <h1>Loading...</h1>
-        )}
-                 </div>
-                    {/*<p>state:{questionsList.data}</p>
-                    <p>{questionsList.data.length} questions</p>
-                    <QuestionList questionsList={questionsList.data} />*/}
-                  </>
-                )}
-              </div>
+            <div className='question-details-page'>
+              {questionsList.data === null ? (
+                <h1>Loading...</h1>
+              ) : (
+                <>
+                  {questionsList.data
+                    .filter(question => question._id === id)
+                    .map(question => (
+                      <div key={question._id}>
+                        {console.log(question)}
+                        <section className='question-details-container'>
+                          <h1>{question.questionTitle}</h1>
+                          <div className='question-details-container2'>
+                            <div className='question-votes'>
+                              <img src={upvote} alt='' width='18' className='votes-icon' />
+                              <p>{question.upVotes - question.downVotes}</p>
+                              <img src={downvote} alt='' width='18' className='votes-icon' />
+                            </div>
+                          </div>
+                          <div style={{ width: '100%' }}>
+                            <p className='question-body'>{question.questionBody}</p>
+                            <div className='question-details-tags'>
+                              {question.questionTags.map(tag => (
+                                <p key={tag}>{tag}</p>
+                              ))}
+                            </div>
+                            <div>
+                              <p>asked {question.askedOn}</p>
+                              <Link to={`/User/${question.userId}`} className='user-link' style={{ color: '' }}>
+                                {/* Assuming Avatar is a component */}
+                                <Avatar backgroundColor='orange' px='8px' py='5px'>
+                                  {question.userPosted}
+                                </Avatar>
+                                <div>{question.userPosted}</div>
+                              </Link>
+                            </div>
+                          </div>
+                        </section>
+                      </div>
+                    ))}
+                </>
+              )}
             </div>
           );
-        };
-        
-      
-    
-        
-    
+          
+
                 
 export default HomeMainbar;
