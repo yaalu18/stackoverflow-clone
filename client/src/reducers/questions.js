@@ -15,4 +15,4 @@ const questionsReducer=(state={data:null},action)=>{
     }
         
 }
-export default questionsReducer
+export default questionsReducer;
