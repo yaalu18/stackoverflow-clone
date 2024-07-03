@@ -10,7 +10,8 @@ const QuestionsDetails=()=>{
     const {id}=useParams()
     const questionsList = useSelector((state) => state.questionsReducer);
     console.log('i am inside QuestionsDetails page,where questionsList:',questionsList)
-    console.log('yes im printing,Am i coming or not',id)
+    console.log('yes im printing,Am i coming or not 1:',id)
+    console.log('yes im printing,Am i coming or not 2:',JSON.stringify(id))
     var questionList=[{
         id:1,
         upVotes:5,
@@ -68,10 +69,11 @@ const QuestionsDetails=()=>{
             <div className='question-details-page'>
                 {
                     questionsList.data === null ?
+                  
                         <h1> Loading...</h1> :
                         (
                             <>
-                                {
+                                { 
                                     questionsList.data.filter(question => question.id == id).map((question) => (
                                         <div key={question.id}>
                                             <section className='question-details-container'>
