@@ -8,6 +8,7 @@ import AskQuestion from '../pages/AskQuestion/AskQuestion.jsx';
 import DisplayQuestions from '../pages/Questions/DisplayQuestions.jsx';
 import Users from '../pages/Users/User.jsx'
 import UserProfile from '../pages/UserProfile/UserProfile.jsx';
+import QuestionsDetails from '../pages/Questions/QuestionsDetails.jsx';
 const AllRoutes=({slideIn, handleSlideIn })=>{
     return(
         <Routes>
@@ -15,8 +16,13 @@ const AllRoutes=({slideIn, handleSlideIn })=>{
             <Route path='/Auth' element={<Auth/>}/>
             <Route path='/Questions' element={<Questions/>}/>
             <Route path='/AskQuestion' element={<AskQuestion/>}/>
-            <Route path='/Questions/:id' element={<DisplayQuestions/>}/>
-            
+           
+            <Route
+        path="/Questions/:id"
+        element={
+          <DisplayQuestions slideIn={slideIn} handleSlideIn={handleSlideIn} />
+        }
+      />
             <Route
             path="/Users"
                 element={<Users slideIn={slideIn} handleSlideIn={handleSlideIn} />}/>

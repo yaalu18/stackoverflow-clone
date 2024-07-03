@@ -3,7 +3,7 @@ import LeftSidebar from "../../components/LeftSidebar/LeftSidebar";
 import RightSidebar from "../../components/RightSidebar/RightSidebar";
 import QuestionsDetails from "./QuestionsDetails";
 
-const DisplayQuestions=()=>{
+const DisplayQuestions=({ slideIn, handleSlideIn })=>{
     return(
         <div className='home-container-1'>
             <LeftSidebar/>
