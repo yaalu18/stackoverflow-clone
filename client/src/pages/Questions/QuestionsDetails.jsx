@@ -74,8 +74,8 @@ const QuestionsDetails=()=>{
                         (
                             <> {JSON.stringify(id)}
                                 { 
-                                    questionsList.data.filter(question => question.id == id).map((question) => (
-                                        <div key={question.id}>
+                                    questionsList.data.filter(question => question._id == id).map((question) => (
+                                        <div key={question._id}>
                                             <section className='question-details-container'>
                                                 <h1>{question.questionTitle}</h1>
                                                 <div className='question-votes'>
