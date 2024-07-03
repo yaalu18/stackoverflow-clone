@@ -72,7 +72,7 @@ const QuestionsDetails=()=>{
                   
                         <h1> Loading...</h1> :
                         (
-                            <>
+                            <> {JSON.stringify(id)}
                                 { 
                                     questionsList.data.filter(question => question.id == id).map((question) => (
                                         <div key={question.id}>
