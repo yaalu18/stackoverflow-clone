@@ -18,7 +18,7 @@ const UserProfile = ({ slideIn, handleSlideIn }) => {
   const currentProfile = users.filter((user) => user._id === id)[0];
   const currentUser = useSelector((state) => state.currentUserReducer);
   const [Switch, setSwitch] = useState(false);
-
+  console.log('users profile id:',id)
   return (
     <div className="home-container-1">
       <LeftSidebar slideIn={slideIn} handleSlideIn={handleSlideIn} />
