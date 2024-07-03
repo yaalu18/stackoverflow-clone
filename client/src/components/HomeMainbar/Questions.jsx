@@ -16,7 +16,7 @@ const Questions=({question})=>{
                 <p>answers</p>
             </div>
             <div className='display-question-details'>
-                <Link to={`/Questions/${question.id}`} className='question-title-Link'>{question.questionTitle}</Link>
+                <Link to={`/Questions/${question._id}`} className='question-title-Link'>{question.questionTitle}</Link>
                 <div className='display-tags-time'>
                     {
                         question.questionTags.map((tag)=>(
